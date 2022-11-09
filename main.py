@@ -2,7 +2,7 @@
 
 import win32com.client
 import os
-from pylab import *
+from math import sqrt
 from sys import exit
 
 class DSS:
@@ -153,9 +153,9 @@ if __name__ == "__main__":
   
     # Criar um objeto da classe DSS
     objeto = DSS("index.dss")
-
+    
     print ("Versão do OpenDSS: " + objeto.versao_DSS() + "\n")
-
+   
     # Resolver o Fluxo de Potência
     objeto.compile_DSS()
     objeto.solve_DSS_snapshot(1.0)
